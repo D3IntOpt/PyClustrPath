@@ -48,7 +48,6 @@ def main():
     from pyclustrpath import ConvexClusterSolver
     solver = ConvexClusterSolver(method=args.solver, gamma_list=gamma_list,             # Load the model
                                  stop_tol=args.stop_tol, max_iter=args.max_iter,
-                                    admm_sub_method=args.admm_sub_method,
                                   use_kkt=args.use_kkt, device=device)
 
     solutions = solver.solve(data_processor)                                            # Solve the problems
