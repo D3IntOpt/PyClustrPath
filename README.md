@@ -16,15 +16,15 @@ Our solver also visualizes the clustering path results:
 <table>
     <tr>
         <td align="center">
-            <img src="demo/results/cluster_path_pictures/clustering_path_lung.jpeg" width="150"/><br/>
+            <img src="demo/results/cluster_path_pictures/clustering_path_lung.jpeg" width="200"/><br/>
             <b>LUNG dataset</b>
         </td>
         <td align="center">
-            <img src="demo/results/cluster_path_pictures/clustering_path_libras6.jpeg" width="150"/><br/>
+            <img src="demo/results/cluster_path_pictures/clustering_path_libras6.jpeg" width="200"/><br/>
             <b>LIBRAS-6 dataset</b>
         </td>
         <td align="center">
-            <img src="demo/results/cluster_path_pictures/clustering_path_COIL20.jpeg" width="150"/><br/>
+            <img src="demo/results/cluster_path_pictures/clustering_path_COIL20.jpeg" width="200"/><br/>
             <b>COIL-20 dataset</b>
         </td>
     </tr>
@@ -41,11 +41,11 @@ The overall GPU speedup exceeds tenfold.
 <table>
     <tr>
         <td align="center">
-            <img src="demo/results/gpu_cpu_COIL20.png" width="200"/><br/>
+            <img src="demo/results/gpu_cpu_COIL20.png" width="300"/><br/>
             <b>Operation performance on GPU and CPU</b>
         </td>
         <td align="center">
-            <img src="demo/results/profile_coil20.png" width="200"/><br/>
+            <img src="demo/results/profile_COIL20.png" width="300"/><br/>
             <b>Profile of different Algorithms and Platforms</b>
         </td>
     </tr>
