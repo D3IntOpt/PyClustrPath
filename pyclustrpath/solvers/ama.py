@@ -1,5 +1,7 @@
 import torch
 import time
+import numpy as np
+
 from .base import SolverBase
 import pyclustrpath.global_variables as gv
 from pyclustrpath.data_processor import DataProcessor
