@@ -1,7 +1,6 @@
-# PyClustrPath : Efficient convex clustering solver with GPU acceleration
-
+# PyClustrPath : An efficient Python package for generating clustering paths with GPU acceleration.
 ## 1. Introduction
-Convex clustering is a popular clustering model without requiring the number of clusters as prior knowledge. 
+Convex clustering is a popular clustering model without requiring the number of clusters as prior knowledge. It can generate a clustering path by continuously solving the model with a sequence of regularization parameter values.
 PyClustrPath is a convex clustering implementation on PyTorch, aiming to solve large-scale convex clustering problems with GPU acceleration.
 Our solver provides several convex clustering methods, including:
 
