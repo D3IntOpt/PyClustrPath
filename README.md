@@ -59,7 +59,7 @@ The overall GPU speedup exceeds tenfold.
 
 
 ### Citing PyClustrPath
-Our paper is available: [PyClustrPath: An Efficient Python Package for Generating Clustering Paths with GPU Acceleration](https://arxiv.org/).
+Our paper is available: Hongfei Wu, Yancheng Yuan, "PyClustrPath: An Efficient Python Package for Generating Clustering Paths with GPU Acceleration", 2025.
 If you use PyClustrPath in your research, we would appreciate the citation to the following paper:
 ```bibtex
 
