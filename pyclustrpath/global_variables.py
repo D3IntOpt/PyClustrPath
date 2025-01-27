@@ -13,7 +13,8 @@ def _init(args):
     global solver_method, data_name, use_coo
     solver_method = args.solver if args.solver is not None else 'ssnal'
     data_name = args.data
-    use_coo = 0 if args.device == 'cpu' else 0
+    # use_coo = 0 if args.device == 'cpu' else 0
+    use_coo = 0
 
 def log_init(logger, agrs):
     '''
