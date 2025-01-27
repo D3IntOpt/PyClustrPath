@@ -10,7 +10,7 @@ Our solver provides several convex clustering methods, including:
 
 [//]: # (* Primal-Dual Hybrid Gradient Algorithm &#40;PDHG&#41;)
 
-Our package visualizes the clustering path results:
+Our package visualizes the clustering path results, as shown in the following figures.
 
 <table>
     <tr>
@@ -30,42 +30,26 @@ Our package visualizes the clustering path results:
 </table>
 
 
-[//]: # (The following figures show the performance comparison between GPU and CPU on the COIL-20 dataset.)
+The following figures show the performance comparison between GPU and CPU on the COIL-20 dataset.
+The first figure demonstrates the GPU's superior performance for various tensor operations.
+For example, on the COIL-20 dataset (with dimensions 1024*1440), the speedup for sparse matrix multiplication and Cholesky decomposition
+for solving systems of linear equations is approximately 40 times and 12 times, respectively.
+The other figure shows that when solving 100 problems, the CPU can only solve less than 65% of the problems within 10 times the time of the GPU. 
+The overall GPU speedup exceeds tenfold.
 
-[//]: # (The first figure demonstrates the GPU's superior performance for various tensor operations. )
 
-[//]: # (For example, on the COIL-20 dataset &#40;with dimensions 1024*1440&#41;, the speedup for sparse matrix multiplication and Cholesky decomposition )
-
-[//]: # (for solving systems of linear equations is approximately 40 times and 12 times, respectively.)
-
-[//]: # (The other figure shows that when solving 100 problems, the CPU can only solve less than 65% of the problems within 10 times the time of the GPU. )
-
-[//]: # (The overall GPU speedup exceeds tenfold.)
-
-[//]: # ()
-[//]: # (<table>)
-
-[//]: # (    <tr>)
-
-[//]: # (        <td align="center">)
-
-[//]: # (            <img src="demo/results/gpu_cpu_COIL20.png" width="300"/><br/>)
-
-[//]: # (            <b>Operation performance on GPU and CPU</b>)
-
-[//]: # (        </td>)
-
-[//]: # (        <td align="center">)
-
-[//]: # (            <img src="demo/results/profile_COIL20.png" width="300"/><br/>)
-
-[//]: # (            <b>Profile of different Algorithms and Platforms</b>)
-
-[//]: # (        </td>)
-
-[//]: # (    </tr>)
-
-[//]: # (</table>)
+<table>
+    <tr>
+        <td align="center">
+            <img src="demo/results/gpu_cpu_COIL20.png" width="300"/><br/>
+            <b>Operation performance on GPU and CPU</b>
+        </td>
+        <td align="center">
+            <img src="demo/results/profile_COIL20.png" width="300"/><br/>
+            <b>Profile of different Algorithms and Platforms</b>
+        </td>
+    </tr>
+</table>
 
 
 
@@ -173,7 +157,7 @@ def get_args():
     parser.add_argument('--k_neighbor', default=10, type=int, help='Number of neighbors to consider in the data processor')
     parser.add_argument('--use_kkt', default=False, type=str2bool, help='Whether to use the KKT condition to stop the solver')
 
-    parser.add_argument('--data', default='libras', type=str,
+    parser.add_argument('--data', default='lung', type=str,
                         help='The dataset to use: libras6, libras, COIL20, lung, MNIST_test')
     parser.add_argument('--device', default=device, type=str, help='The device to use: cpu or cuda')
 
