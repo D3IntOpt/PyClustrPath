@@ -1,14 +1,21 @@
 # PyClustrPath : An efficient Python package for generating clustering paths with GPU acceleration.
 ## 1. Introduction
 Convex clustering is a popular clustering model without requiring the number of clusters as prior knowledge. It can generate a clustering path by continuously solving the model with a sequence of regularization parameter values.
-PyClustrPath is a convex clustering implementation on PyTorch, aiming to solve large-scale convex clustering problems with GPU acceleration.
-Our solver provides several convex clustering methods, including:
-
+PyClustrPath is a convex clustering implementation on PyTorch, aiming to solve large-scale convex clustering problems with GPU acceleration. Several optimization algorithms have been designed for solving the convex clustering model, including:
 * Semismooth Newton-CG Augmented Lagrangian Method (SSNAL) [[1]](#ref1) [[2]](#ref2)
-* Alternating Minimization Algorithm (AMA) and Fast AMA [[3]](#ref3)
+* Alternating Minimization Algorithm (AMA) and fast AMA [[3]](#ref3)
 * Alternating Direction Method of Multipliers (ADMM) [[3]](#ref3)
 
-[//]: # (* Primal-Dual Hybrid Gradient Algorithm &#40;PDHG&#41;)
+We summarize the main contributions of **PyClustrPath** as follows:
+- We design and develop a new Python package for efficiently generating clustering paths by solving convex clustering model, which supports both CPU and GPU computation platforms simultaneously.
+
+- We implement three popular and efficient algorithms in **PyClustrPath**: ADMM, fast AMA, and SSNAL.
+
+- We design the package **PyClustrPath** in a well-structured modular manner, making it flexible and scalable to incorporate new algorithms in the future.
+
+- We develop a visualization module in **PyClustrPath**, providing a user-friendly way to visualize the generated clustering path.
+
+- We extensively test **PyClustrPath**'s numerical performance for generating clustering paths for several popular benchmark datasets. The results demonstrate the efficiency and robustness of **PyClustrPath**.
 
 Our package visualizes the clustering path results, as shown in the following figures.
 
@@ -37,7 +44,6 @@ for solving systems of linear equations is approximately 40 times and 12 times, 
 The other figure shows that when solving 100 problems, the CPU can only solve less than 65% of the problems within 10 times the time of the GPU. 
 The overall GPU speedup exceeds tenfold.
 
-
 <table>
     <tr>
         <td align="center">
@@ -51,6 +57,13 @@ The overall GPU speedup exceeds tenfold.
     </tr>
 </table>
 
+
+### Citing PyClustrPath
+Our paper is available: [PyClustrPath: An Efficient Python Package for Generating Clustering Paths with GPU Acceleration](https://arxiv.org/).
+If you use PyClustrPath in your research, we would appreciate the citation to the following paper:
+```bibtex
+
+```
 
 
 ## 2. Hardware and Environment
@@ -199,7 +212,7 @@ Then you can check the clustering path visualization results in the same folder 
 And the log file will be saved in the `/log_file` folder.
 
 
-## 6. Reference
+## 6. References
 
 <a id="ref1"></a>[1] D.F. Sun, K.C. Toh, and Y.C. Yuan, Convex clustering: model, theoretical guarantee and efficient algorithm, Journal of Machine Learning Research, 22(9), 2021.
 
