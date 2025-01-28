@@ -63,7 +63,15 @@ Our paper is available: Hongfei Wu, Yancheng Yuan, "[PyClustrPath: An efficient 
 
 If you use PyClustrPath in your research, we would appreciate the citation to the following paper:
 ```bibtex
-
+@misc{wu2025pyclustrpathefficientpythonpackage,
+      title={PyClustrPath: An efficient Python package for generating clustering paths with GPU acceleration}, 
+      author={Hongfei Wu and Yancheng Yuan},
+      year={2025},
+      eprint={2501.15964},
+      archivePrefix={arXiv},
+      primaryClass={math.OC},
+      url={https://arxiv.org/abs/2501.15964}, 
+}
 ```
 
 
